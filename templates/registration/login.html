@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Session Authentication Demo. Login To Access API</h1>
+    <form method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ request.GET.next }}">
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
